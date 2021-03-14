@@ -2,7 +2,13 @@
   "contractName": "dBank",
   "abi": [
     {
-      "inputs": [],
+      "inputs": [
+        {
+          "internalType": "contract Token",
+          "name": "_token",
+          "type": "address"
+        }
+      ],
       "stateMutability": "nonpayable",
       "type": "constructor"
     },
@@ -35,44 +41,44 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.7.6+commit.7338295f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"borrow\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"deposit\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"payOff\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"withdraw\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/christianroque/Desktop/dbank/src/contracts/dBank.sol\":\"dBank\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/christianroque/Desktop/dbank/src/contracts/Token.sol\":{\"keccak256\":\"0x2ee27bc4cab49ee2b3b14e8007cf014a48be588eedb17a4cfb3d110556b58acb\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://01734ce54825ead7a0fe4c8655ff353651690e4c4bb5dc6aa1a1877b00d6e49f\",\"dweb:/ipfs/QmNsDbFo6gMQerdtorPyjSR5L8A4ZjgP7qDr1v6ZDiLRQA\"]},\"/Users/christianroque/Desktop/dbank/src/contracts/dBank.sol\":{\"keccak256\":\"0x247f4851e9bf92ae52e7b64c0cf87cba9ca53a393479b8ce1bec6d766fdc1d01\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a18b4340335aa435e5d84b26df57fb6e36706d396a7704afaa728397ebf5bf89\",\"dweb:/ipfs/QmYWwKsg3xY6o75x42visiNdD6BfUoVZbX2tt4RC6oJhnT\"]},\"@openzeppelin/contracts/GSN/Context.sol\":{\"keccak256\":\"0x8d3cb350f04ff49cfb10aef08d87f19dcbaecc8027b0bed12f3275cd12f38cf0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ded47ec7c96750f9bd04bbbc84f659992d4ba901cb7b532a52cd468272cf378f\",\"dweb:/ipfs/QmfBrGtQP7rZEqEg6Wz6jh2N2Kukpj1z5v3CGWmAqrzm96\"]},\"@openzeppelin/contracts/math/SafeMath.sol\":{\"keccak256\":\"0x3b21f2c8d626de3b9925ae33e972d8bf5c8b1bffb3f4ee94daeed7d0679036e6\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7f8d45329fecbf0836ad7543330c3ecd0f8d0ffa42d4016278c3eb2215fdcdfe\",\"dweb:/ipfs/QmXWLT7GcnHtA5NiD6MFi2CV3EWJY4wv5mLNnypqYDrxL3\"]},\"@openzeppelin/contracts/token/ERC20/ERC20.sol\":{\"keccak256\":\"0xcbd85c86627a47fd939f1f4ee3ba626575ff2a182e1804b29f5136394449b538\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://53c6a80c519bb9356aad28efa9a1ec31603860eb759d2dc57f545fcae1dd1aca\",\"dweb:/ipfs/QmfRS6TtMNUHhvgLHXK21qKNnpn2S7g2Yd1fKaHKyFiJsR\"]},\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x5f02220344881ce43204ae4a6281145a67bc52c2bb1290a791857df3d19d78f5\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://24427744bd3e6cb73c17010119af12a318289c0253a4d9acb8576c9fb3797b08\",\"dweb:/ipfs/QmTLDqpKRBuxGxRAmjgXt9AkXyACW3MtKzi7PYjm5iMfGC\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b5060b58061001f6000396000f3fe608060405260043610603a5760003560e01c80633ccfd60b14603f5780633fac68d5146053578063d0e30db0146067578063e68d356914606f575b600080fd5b348015604a57600080fd5b5060516077565b005b348015605e57600080fd5b5060656079565b005b606d607b565b005b6075607d565b005b565b565b565b56fea2646970667358221220d3c2819bc4f8c7507ca4be06e2d6a898048bffd50b5f1611b54ba81907b3ebe264736f6c63430007060033",
-  "deployedBytecode": "0x608060405260043610603a5760003560e01c80633ccfd60b14603f5780633fac68d5146053578063d0e30db0146067578063e68d356914606f575b600080fd5b348015604a57600080fd5b5060516077565b005b348015605e57600080fd5b5060656079565b005b606d607b565b005b6075607d565b005b565b565b565b56fea2646970667358221220d3c2819bc4f8c7507ca4be06e2d6a898048bffd50b5f1611b54ba81907b3ebe264736f6c63430007060033",
+  "metadata": "{\"compiler\":{\"version\":\"0.7.6+commit.7338295f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract Token\",\"name\":\"_token\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"borrow\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"deposit\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"payOff\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"withdraw\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/christianroque/Desktop/dbank/src/contracts/dBank.sol\":\"dBank\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/christianroque/Desktop/dbank/src/contracts/Token.sol\":{\"keccak256\":\"0x5826d73273c16ac4989ab9e5bd276e25ec0d6ee2fb0bfc973bbec4db7cca6be8\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://fb5b8a53194217c834de4e226bd7485b2a39c600552f959d8b55231e3a95f7ad\",\"dweb:/ipfs/QmSCnKeTapaV8cJ7kBqXgriearNAAaYfNrLZKAERtfUMR6\"]},\"/Users/christianroque/Desktop/dbank/src/contracts/dBank.sol\":{\"keccak256\":\"0xc68b6b7877923d61cc3797474bfce365fe1623ad0c7076f974eafdc03ce525cd\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6662de6867ca18a50e8c95538a4aa864af9661f650d04c7943f024dd56e239da\",\"dweb:/ipfs/Qmdjb4PZaE3jxDFuacG9kv98bfMye278n5dX9LCYFkJjfw\"]},\"@openzeppelin/contracts/GSN/Context.sol\":{\"keccak256\":\"0x8d3cb350f04ff49cfb10aef08d87f19dcbaecc8027b0bed12f3275cd12f38cf0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ded47ec7c96750f9bd04bbbc84f659992d4ba901cb7b532a52cd468272cf378f\",\"dweb:/ipfs/QmfBrGtQP7rZEqEg6Wz6jh2N2Kukpj1z5v3CGWmAqrzm96\"]},\"@openzeppelin/contracts/math/SafeMath.sol\":{\"keccak256\":\"0x3b21f2c8d626de3b9925ae33e972d8bf5c8b1bffb3f4ee94daeed7d0679036e6\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7f8d45329fecbf0836ad7543330c3ecd0f8d0ffa42d4016278c3eb2215fdcdfe\",\"dweb:/ipfs/QmXWLT7GcnHtA5NiD6MFi2CV3EWJY4wv5mLNnypqYDrxL3\"]},\"@openzeppelin/contracts/token/ERC20/ERC20.sol\":{\"keccak256\":\"0xcbd85c86627a47fd939f1f4ee3ba626575ff2a182e1804b29f5136394449b538\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://53c6a80c519bb9356aad28efa9a1ec31603860eb759d2dc57f545fcae1dd1aca\",\"dweb:/ipfs/QmfRS6TtMNUHhvgLHXK21qKNnpn2S7g2Yd1fKaHKyFiJsR\"]},\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x5f02220344881ce43204ae4a6281145a67bc52c2bb1290a791857df3d19d78f5\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://24427744bd3e6cb73c17010119af12a318289c0253a4d9acb8576c9fb3797b08\",\"dweb:/ipfs/QmTLDqpKRBuxGxRAmjgXt9AkXyACW3MtKzi7PYjm5iMfGC\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506040516101483803806101488339818101604052602081101561003357600080fd5b8101908080519060200190929190505050806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505060b5806100936000396000f3fe608060405260043610603a5760003560e01c80633ccfd60b14603f5780633fac68d5146053578063d0e30db0146067578063e68d356914606f575b600080fd5b348015604a57600080fd5b5060516077565b005b348015605e57600080fd5b5060656079565b005b606d607b565b005b6075607d565b005b565b565b565b56fea26469706673582212201963fe08bf8e7bc6a5bcf4a421e8d05b83cdf53f9eaa59fafd4d745863bddc0264736f6c63430007060033",
+  "deployedBytecode": "0x608060405260043610603a5760003560e01c80633ccfd60b14603f5780633fac68d5146053578063d0e30db0146067578063e68d356914606f575b600080fd5b348015604a57600080fd5b5060516077565b005b348015605e57600080fd5b5060656079565b005b606d607b565b005b6075607d565b005b565b565b565b56fea26469706673582212201963fe08bf8e7bc6a5bcf4a421e8d05b83cdf53f9eaa59fafd4d745863bddc0264736f6c63430007060033",
   "immutableReferences": {},
   "generatedSources": [],
   "deployedGeneratedSources": [],
-  "sourceMap": "93:1481:1:-:0;;;252:77;;;;;;;;;;93:1481;;;;;;",
-  "deployedSourceMap": "93:1481:1:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;646:362;;;;;;;;;;;;;:::i;:::-;;1344:227;;;;;;;;;;;;;:::i;:::-;;335:305;;;:::i;:::-;;1014:324;;;:::i;:::-;;646:362;:::o;1344:227::-;:::o;335:305::-;:::o;1014:324::-;:::o",
-  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.6.0 <0.8.0;\r\n\r\nimport \"./Token.sol\";\r\n\r\ncontract dBank {\r\n\r\n  //assign Token contract to variable\r\n\r\n  //add mappings\r\n\r\n  //add events\r\n\r\n  //pass as constructor argument deployed Token contract\r\n  constructor() public {\r\n    //assign token deployed contract to variable\r\n  }\r\n\r\n  function deposit() payable public {\r\n    //check if msg.sender didn't already deposited funds\r\n    //check if msg.value is >= than 0.01 ETH\r\n\r\n    //increase msg.sender ether deposit balance\r\n    //start msg.sender hodling time\r\n\r\n    //set msg.sender deposit status to true\r\n    //emit Deposit event\r\n  }\r\n\r\n  function withdraw() public {\r\n    //check if msg.sender deposit status is true\r\n    //assign msg.sender ether deposit balance to variable for event\r\n\r\n    //check user's hodl time\r\n\r\n    //calc interest per second\r\n    //calc accrued interest\r\n\r\n    //send eth to user\r\n    //send interest in tokens to user\r\n\r\n    //reset depositer data\r\n\r\n    //emit event\r\n  }\r\n\r\n  function borrow() payable public {\r\n    //check if collateral is >= than 0.01 ETH\r\n    //check if user doesn't have active loan\r\n\r\n    //add msg.value to ether collateral\r\n\r\n    //calc tokens amount to mint, 50% of msg.value\r\n\r\n    //mint&send tokens to user\r\n\r\n    //activate borrower's loan status\r\n\r\n    //emit event\r\n  }\r\n\r\n  function payOff() public {\r\n    //check if loan is active\r\n    //transfer tokens from user back to the contract\r\n\r\n    //calc fee\r\n\r\n    //send user's collateral minus fee\r\n\r\n    //reset borrower's data\r\n\r\n    //emit event\r\n  }\r\n}",
+  "sourceMap": "93:1600:1:-:0;;;286:66;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;338:6;330:5;;:14;;;;;;;;;;;;;;;;;;286:66;93:1600;;;;;;",
+  "deployedSourceMap": "93:1600:1:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;695:390;;;;;;;;;;;;;:::i;:::-;;1445:245;;;;;;;;;;;;;:::i;:::-;;360:327;;;:::i;:::-;;1093:344;;;:::i;:::-;;695:390;:::o;1445:245::-;:::o;360:327::-;:::o;1093:344::-;:::o",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.6.0 <0.8.0;\r\n\r\nimport \"./Token.sol\";\r\n\r\ncontract dBank {\r\n    //assign Token contract to variable\r\n    Token private token;\r\n\r\n    //add mappings\r\n\r\n    //add events\r\n\r\n    //pass as constructor argument deployed Token contract\r\n    constructor(Token _token) public {\r\n        token = _token;\r\n    }\r\n\r\n    function deposit() public payable {\r\n        //check if msg.sender didn't already deposited funds\r\n        //check if msg.value is >= than 0.01 ETH\r\n        //increase msg.sender ether deposit balance\r\n        //start msg.sender hodling time\r\n        //set msg.sender deposit status to true\r\n        //emit Deposit event\r\n    }\r\n\r\n    function withdraw() public {\r\n        //check if msg.sender deposit status is true\r\n        //assign msg.sender ether deposit balance to variable for event\r\n        //check user's hodl time\r\n        //calc interest per second\r\n        //calc accrued interest\r\n        //send eth to user\r\n        //send interest in tokens to user\r\n        //reset depositer data\r\n        //emit event\r\n    }\r\n\r\n    function borrow() public payable {\r\n        //check if collateral is >= than 0.01 ETH\r\n        //check if user doesn't have active loan\r\n        //add msg.value to ether collateral\r\n        //calc tokens amount to mint, 50% of msg.value\r\n        //mint&send tokens to user\r\n        //activate borrower's loan status\r\n        //emit event\r\n    }\r\n\r\n    function payOff() public {\r\n        //check if loan is active\r\n        //transfer tokens from user back to the contract\r\n        //calc fee\r\n        //send user's collateral minus fee\r\n        //reset borrower's data\r\n        //emit event\r\n    }\r\n}\r\n",
   "sourcePath": "/Users/christianroque/Desktop/dbank/src/contracts/dBank.sol",
   "ast": {
     "absolutePath": "/Users/christianroque/Desktop/dbank/src/contracts/dBank.sol",
     "exportedSymbols": {
       "Context": [
-        121
+        130
       ],
       "ERC20": [
-        820
+        829
       ],
       "IERC20": [
-        898
+        907
       ],
       "SafeMath": [
-        317
+        326
       ],
       "Token": [
-        74
+        75
       ],
       "dBank": [
-        98
+        107
       ]
     },
-    "id": 99,
+    "id": 108,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 76,
+        "id": 77,
         "literals": [
           "solidity",
           ">=",
@@ -88,10 +94,10 @@
       {
         "absolutePath": "/Users/christianroque/Desktop/dbank/src/contracts/Token.sol",
         "file": "./Token.sol",
-        "id": 77,
+        "id": 78,
         "nodeType": "ImportDirective",
-        "scope": 99,
-        "sourceUnit": 75,
+        "scope": 108,
+        "sourceUnit": 76,
         "src": "68:21:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -102,200 +108,299 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 98,
+        "id": 107,
         "linearizedBaseContracts": [
-          98
+          107
         ],
         "name": "dBank",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
-            "body": {
-              "id": 80,
-              "nodeType": "Block",
-              "src": "273:56:1",
-              "statements": []
+            "constant": false,
+            "id": 80,
+            "mutability": "mutable",
+            "name": "token",
+            "nodeType": "VariableDeclaration",
+            "scope": 107,
+            "src": "156:19:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_Token_$75",
+              "typeString": "contract Token"
             },
-            "id": 81,
+            "typeName": {
+              "id": 79,
+              "name": "Token",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 75,
+              "src": "156:5:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Token_$75",
+                "typeString": "contract Token"
+              }
+            },
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 89,
+              "nodeType": "Block",
+              "src": "319:33:1",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 87,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 85,
+                      "name": "token",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 80,
+                      "src": "330:5:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Token_$75",
+                        "typeString": "contract Token"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 86,
+                      "name": "_token",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 82,
+                      "src": "338:6:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Token_$75",
+                        "typeString": "contract Token"
+                      }
+                    },
+                    "src": "330:14:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Token_$75",
+                      "typeString": "contract Token"
+                    }
+                  },
+                  "id": 88,
+                  "nodeType": "ExpressionStatement",
+                  "src": "330:14:1"
+                }
+              ]
+            },
+            "id": 90,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 78,
+              "id": 83,
               "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "263:2:1"
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 82,
+                  "mutability": "mutable",
+                  "name": "_token",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 90,
+                  "src": "298:12:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Token_$75",
+                    "typeString": "contract Token"
+                  },
+                  "typeName": {
+                    "id": 81,
+                    "name": "Token",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 75,
+                    "src": "298:5:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Token_$75",
+                      "typeString": "contract Token"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "297:14:1"
             },
             "returnParameters": {
-              "id": 79,
+              "id": 84,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "273:0:1"
+              "src": "319:0:1"
             },
-            "scope": 98,
-            "src": "252:77:1",
+            "scope": 107,
+            "src": "286:66:1",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 84,
+              "id": 93,
               "nodeType": "Block",
-              "src": "369:271:1",
+              "src": "394:293:1",
               "statements": []
             },
             "functionSelector": "d0e30db0",
-            "id": 85,
+            "id": 94,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "deposit",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 82,
+              "id": 91,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "351:2:1"
+              "src": "376:2:1"
             },
             "returnParameters": {
-              "id": 83,
+              "id": 92,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "369:0:1"
+              "src": "394:0:1"
             },
-            "scope": 98,
-            "src": "335:305:1",
+            "scope": 107,
+            "src": "360:327:1",
             "stateMutability": "payable",
             "virtual": false,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 88,
+              "id": 97,
               "nodeType": "Block",
-              "src": "673:335:1",
+              "src": "722:363:1",
               "statements": []
             },
             "functionSelector": "3ccfd60b",
-            "id": 89,
+            "id": 98,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "withdraw",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 86,
+              "id": 95,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "663:2:1"
+              "src": "712:2:1"
             },
             "returnParameters": {
-              "id": 87,
+              "id": 96,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "673:0:1"
+              "src": "722:0:1"
             },
-            "scope": 98,
-            "src": "646:362:1",
+            "scope": 107,
+            "src": "695:390:1",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 92,
+              "id": 101,
               "nodeType": "Block",
-              "src": "1047:291:1",
+              "src": "1126:311:1",
               "statements": []
             },
             "functionSelector": "e68d3569",
-            "id": 93,
+            "id": 102,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "borrow",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 90,
+              "id": 99,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1029:2:1"
+              "src": "1108:2:1"
             },
             "returnParameters": {
-              "id": 91,
+              "id": 100,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1047:0:1"
+              "src": "1126:0:1"
             },
-            "scope": 98,
-            "src": "1014:324:1",
+            "scope": 107,
+            "src": "1093:344:1",
             "stateMutability": "payable",
             "virtual": false,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 96,
+              "id": 105,
               "nodeType": "Block",
-              "src": "1369:202:1",
+              "src": "1470:220:1",
               "statements": []
             },
             "functionSelector": "3fac68d5",
-            "id": 97,
+            "id": 106,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "payOff",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 94,
+              "id": 103,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1359:2:1"
+              "src": "1460:2:1"
             },
             "returnParameters": {
-              "id": 95,
+              "id": 104,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1369:0:1"
+              "src": "1470:0:1"
             },
-            "scope": 98,
-            "src": "1344:227:1",
+            "scope": 107,
+            "src": "1445:245:1",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           }
         ],
-        "scope": 99,
-        "src": "93:1481:1"
+        "scope": 108,
+        "src": "93:1600:1"
       }
     ],
-    "src": "33:1541:1"
+    "src": "33:1662:1"
   },
   "legacyAST": {
     "attributes": {
       "absolutePath": "/Users/christianroque/Desktop/dbank/src/contracts/dBank.sol",
       "exportedSymbols": {
         "Context": [
-          121
+          130
         ],
         "ERC20": [
-          820
+          829
         ],
         "IERC20": [
-          898
+          907
         ],
         "SafeMath": [
-          317
+          326
         ],
         "Token": [
-          74
+          75
         ],
         "dBank": [
-          98
+          107
         ]
       },
       "license": "MIT"
@@ -313,22 +418,22 @@
             ".0"
           ]
         },
-        "id": 76,
+        "id": 77,
         "name": "PragmaDirective",
         "src": "33:31:1"
       },
       {
         "attributes": {
-          "SourceUnit": 75,
+          "SourceUnit": 76,
           "absolutePath": "/Users/christianroque/Desktop/dbank/src/contracts/Token.sol",
           "file": "./Token.sol",
-          "scope": 99,
+          "scope": 108,
           "symbolAliases": [
             null
           ],
           "unitAlias": ""
         },
-        "id": 77,
+        "id": 78,
         "name": "ImportDirective",
         "src": "68:21:1"
       },
@@ -344,12 +449,39 @@
           "contractKind": "contract",
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            98
+            107
           ],
           "name": "dBank",
-          "scope": 99
+          "scope": 108
         },
         "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "mutability": "mutable",
+              "name": "token",
+              "scope": 107,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "contract Token",
+              "visibility": "private"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "Token",
+                  "referencedDeclaration": 75,
+                  "type": "contract Token"
+                },
+                "id": 79,
+                "name": "UserDefinedTypeName",
+                "src": "156:5:1"
+              }
+            ],
+            "id": 80,
+            "name": "VariableDeclaration",
+            "src": "156:19:1"
+          },
           {
             "attributes": {
               "implemented": true,
@@ -359,22 +491,45 @@
                 null
               ],
               "name": "",
-              "scope": 98,
+              "scope": 107,
               "stateMutability": "nonpayable",
               "virtual": false,
               "visibility": "public"
             },
             "children": [
               {
-                "attributes": {
-                  "parameters": [
-                    null
-                  ]
-                },
-                "children": [],
-                "id": 78,
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_token",
+                      "scope": 90,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "contract Token",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "Token",
+                          "referencedDeclaration": 75,
+                          "type": "contract Token"
+                        },
+                        "id": 81,
+                        "name": "UserDefinedTypeName",
+                        "src": "298:5:1"
+                      }
+                    ],
+                    "id": 82,
+                    "name": "VariableDeclaration",
+                    "src": "298:12:1"
+                  }
+                ],
+                "id": 83,
                 "name": "ParameterList",
-                "src": "263:2:1"
+                "src": "297:14:1"
               },
               {
                 "attributes": {
@@ -383,25 +538,69 @@
                   ]
                 },
                 "children": [],
-                "id": 79,
+                "id": 84,
                 "name": "ParameterList",
-                "src": "273:0:1"
+                "src": "319:0:1"
               },
               {
-                "attributes": {
-                  "statements": [
-                    null
-                  ]
-                },
-                "children": [],
-                "id": 80,
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "contract Token"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 80,
+                              "type": "contract Token",
+                              "value": "token"
+                            },
+                            "id": 85,
+                            "name": "Identifier",
+                            "src": "330:5:1"
+                          },
+                          {
+                            "attributes": {
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 82,
+                              "type": "contract Token",
+                              "value": "_token"
+                            },
+                            "id": 86,
+                            "name": "Identifier",
+                            "src": "338:6:1"
+                          }
+                        ],
+                        "id": 87,
+                        "name": "Assignment",
+                        "src": "330:14:1"
+                      }
+                    ],
+                    "id": 88,
+                    "name": "ExpressionStatement",
+                    "src": "330:14:1"
+                  }
+                ],
+                "id": 89,
                 "name": "Block",
-                "src": "273:56:1"
+                "src": "319:33:1"
               }
             ],
-            "id": 81,
+            "id": 90,
             "name": "FunctionDefinition",
-            "src": "252:77:1"
+            "src": "286:66:1"
           },
           {
             "attributes": {
@@ -413,7 +612,7 @@
                 null
               ],
               "name": "deposit",
-              "scope": 98,
+              "scope": 107,
               "stateMutability": "payable",
               "virtual": false,
               "visibility": "public"
@@ -426,9 +625,9 @@
                   ]
                 },
                 "children": [],
-                "id": 82,
+                "id": 91,
                 "name": "ParameterList",
-                "src": "351:2:1"
+                "src": "376:2:1"
               },
               {
                 "attributes": {
@@ -437,9 +636,9 @@
                   ]
                 },
                 "children": [],
-                "id": 83,
+                "id": 92,
                 "name": "ParameterList",
-                "src": "369:0:1"
+                "src": "394:0:1"
               },
               {
                 "attributes": {
@@ -448,14 +647,14 @@
                   ]
                 },
                 "children": [],
-                "id": 84,
+                "id": 93,
                 "name": "Block",
-                "src": "369:271:1"
+                "src": "394:293:1"
               }
             ],
-            "id": 85,
+            "id": 94,
             "name": "FunctionDefinition",
-            "src": "335:305:1"
+            "src": "360:327:1"
           },
           {
             "attributes": {
@@ -467,7 +666,7 @@
                 null
               ],
               "name": "withdraw",
-              "scope": 98,
+              "scope": 107,
               "stateMutability": "nonpayable",
               "virtual": false,
               "visibility": "public"
@@ -480,9 +679,9 @@
                   ]
                 },
                 "children": [],
-                "id": 86,
+                "id": 95,
                 "name": "ParameterList",
-                "src": "663:2:1"
+                "src": "712:2:1"
               },
               {
                 "attributes": {
@@ -491,9 +690,9 @@
                   ]
                 },
                 "children": [],
-                "id": 87,
+                "id": 96,
                 "name": "ParameterList",
-                "src": "673:0:1"
+                "src": "722:0:1"
               },
               {
                 "attributes": {
@@ -502,14 +701,14 @@
                   ]
                 },
                 "children": [],
-                "id": 88,
+                "id": 97,
                 "name": "Block",
-                "src": "673:335:1"
+                "src": "722:363:1"
               }
             ],
-            "id": 89,
+            "id": 98,
             "name": "FunctionDefinition",
-            "src": "646:362:1"
+            "src": "695:390:1"
           },
           {
             "attributes": {
@@ -521,7 +720,7 @@
                 null
               ],
               "name": "borrow",
-              "scope": 98,
+              "scope": 107,
               "stateMutability": "payable",
               "virtual": false,
               "visibility": "public"
@@ -534,9 +733,9 @@
                   ]
                 },
                 "children": [],
-                "id": 90,
+                "id": 99,
                 "name": "ParameterList",
-                "src": "1029:2:1"
+                "src": "1108:2:1"
               },
               {
                 "attributes": {
@@ -545,9 +744,9 @@
                   ]
                 },
                 "children": [],
-                "id": 91,
+                "id": 100,
                 "name": "ParameterList",
-                "src": "1047:0:1"
+                "src": "1126:0:1"
               },
               {
                 "attributes": {
@@ -556,14 +755,14 @@
                   ]
                 },
                 "children": [],
-                "id": 92,
+                "id": 101,
                 "name": "Block",
-                "src": "1047:291:1"
+                "src": "1126:311:1"
               }
             ],
-            "id": 93,
+            "id": 102,
             "name": "FunctionDefinition",
-            "src": "1014:324:1"
+            "src": "1093:344:1"
           },
           {
             "attributes": {
@@ -575,7 +774,7 @@
                 null
               ],
               "name": "payOff",
-              "scope": 98,
+              "scope": 107,
               "stateMutability": "nonpayable",
               "virtual": false,
               "visibility": "public"
@@ -588,9 +787,9 @@
                   ]
                 },
                 "children": [],
-                "id": 94,
+                "id": 103,
                 "name": "ParameterList",
-                "src": "1359:2:1"
+                "src": "1460:2:1"
               },
               {
                 "attributes": {
@@ -599,9 +798,9 @@
                   ]
                 },
                 "children": [],
-                "id": 95,
+                "id": 104,
                 "name": "ParameterList",
-                "src": "1369:0:1"
+                "src": "1470:0:1"
               },
               {
                 "attributes": {
@@ -610,33 +809,39 @@
                   ]
                 },
                 "children": [],
-                "id": 96,
+                "id": 105,
                 "name": "Block",
-                "src": "1369:202:1"
+                "src": "1470:220:1"
               }
             ],
-            "id": 97,
+            "id": 106,
             "name": "FunctionDefinition",
-            "src": "1344:227:1"
+            "src": "1445:245:1"
           }
         ],
-        "id": 98,
+        "id": 107,
         "name": "ContractDefinition",
-        "src": "93:1481:1"
+        "src": "93:1600:1"
       }
     ],
-    "id": 99,
+    "id": 108,
     "name": "SourceUnit",
-    "src": "33:1541:1"
+    "src": "33:1662:1"
   },
   "compiler": {
     "name": "solc",
     "version": "0.7.6+commit.7338295f.Emscripten.clang"
   },
-  "networks": {},
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0xe2Cf70b58445cf4f0675a871DE23fBe9743A6419",
+      "transactionHash": "0x38071b72709dd9fedd40519d6a1f66907ac8e2857386e41b84a22f9334c5208c"
+    }
+  },
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-03-14T19:08:27.915Z",
-  "networkType": "ethereum",
+  "updatedAt": "2021-03-14T20:20:28.354Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},

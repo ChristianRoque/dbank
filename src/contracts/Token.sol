@@ -6,14 +6,17 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 contract Token is ERC20 {
     address public minter;
 
-    event MinterChanged (address indexed from, addess)
+    event MinterChanged(address indexed from, address to);
 
-    constructor() public payable ERC20("Name", "Symbol") {
+    constructor() public payable ERC20("Decentralized Bank Currency", "DBC") {
         minter = msg.sender;
     }
 
     function passMinterRole(address _dbank) public returns (bool) {
-        require(msg.sender == minter);
+        require(
+            msg.sender == minter,
+            "Error, only owner can change pass minter role"
+        );
         minter = _dbank;
 
         emit MinterChanged(msg.sender, _dbank);
