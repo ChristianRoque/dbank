@@ -60,8 +60,13 @@ contract dBank {
   }
 
   function payOff() public {
+<<<<<<< HEAD
     //check if loan is active
     //transfer tokens from user back to the contract
+=======
+    require(isBorrowed[msg.sender] == true, 'Error, loan not active');
+    require(token.transferFrom(msg.sender, address(this), collateralEther[msg.sender]/2), "Error, can't receive tokens"); //must approve dBank 1st
+>>>>>>> origin
 
     //calc fee
 

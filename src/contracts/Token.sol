@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 contract Token is ERC20 {
     address public minter;
 
-    event MinterChanged(address indexed from, address to);
+    event MinterChanged (address indexed from, addess)
 
     constructor() public payable ERC20("Name", "Symbol") {
         minter = msg.sender;
