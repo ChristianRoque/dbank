@@ -4,15 +4,20 @@ pragma solidity >=0.6.0 <0.8.0;
 import "./Token.sol";
 
 contract dBank {
-    //assign Token contract to variable
+    // My token address and information
     Token private token;
 
-    //add mappings
+    //pass as constructor argument deployed Token contract
+    constructor(Token _token) public {
+        token = _token;
+    }
+
+    //Mapping user data on contract run
     mapping(address => uint256) public etherBalanceOf;
     mapping(address => uint256) public depositStart;
     mapping(address => bool) public isDeposited;
 
-    //add events
+    // Console events
     event Deposit(address indexed user, uint256 etherAmount, uint256 timeStart);
     event Withdraw(
         address indexed user,
@@ -20,11 +25,6 @@ contract dBank {
         uint256 timeStart,
         uint256 interest
     );
-
-    //pass as constructor argument deployed Token contract
-    constructor(Token _token) public {
-        token = _token;
-    }
 
     function deposit() public payable {
         require(
