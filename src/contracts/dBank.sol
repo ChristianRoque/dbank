@@ -47,7 +47,6 @@ contract dBank {
             isDeposited[msg.sender] == true,
             "Make a deposite before withdrawing"
         );
-
         // calculating apy for alt token
         uint256 depositeTime = block.timestamp - depositStart[msg.sender];
         uint256 interestPerSecond = 31668017 * (userBalance / 1e16);

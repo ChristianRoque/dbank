@@ -18,7 +18,8 @@ class App extends Component {
       const accounts = await web3.eth.getAccounts();
 
       //MetaMask currently only viewing one account at the time
-      // many hours wasted on a bug
+      //many hours wasted on a bug
+
       if (typeof accounts[0] !== "undefined") {
         const balance = await web3.eth.getBalance(accounts[0]);
         this.setState({ account: accounts[0], balance: balance, web3: web3 });
@@ -59,31 +60,6 @@ class App extends Component {
           .send({ value: amount.toString(), from: this.state.account });
       } catch (e) {
         console.log("Error, deposit: ", e);
-      }
-    }
-  }
-
-  async withdraw(e) {
-    e.preventDefault();
-    if (this.state.dbank !== "undefined") {
-      try {
-        await this.state.dbank.methods
-          .withdraw()
-          .send({ from: this.state.account });
-      } catch (e) {
-        console.log("Error, withdraw: ", e);
-      }
-    }
-  }
-
-  async borrow(amount) {
-    if (this.state.dbank !== "undefined") {
-      try {
-        await this.state.dbank.methods
-          .borrow()
-          .send({ value: amount.toString(), from: this.state.account });
-      } catch (e) {
-        console.log("Error, borrow: ", e);
       }
     }
   }
